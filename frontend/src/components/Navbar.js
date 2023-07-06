@@ -20,7 +20,7 @@ const Navbar = () => {
       <nav className='navbar navbar-expand-md navbar-light bg-light'>
         <div className='container-xxl'>
           <Link to='/' className='navbar-brand'>
-            <span className='fw-bolder text-secondary'>SCMS - the Web App</span>
+            <span className='fw-bolder text-secondary'>SaaCMS - the Web App</span>
           </Link>
           {/* toggle button for mobile nav */}
           <button
