@@ -41,16 +41,23 @@ const Update = () => {
         } else if (upassword !== cpassword ) {
             swal("Warning!", "Please enter same passwords", "warning");
         } else {
-            const res2 = await fetch(`/update/${id}`, {
-                method: "PATCH",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    fname, lname, uphone, uemail, upassword, cpassword
-                })
-
-            });
+            const res2 = await fetch(
+				`https://scms-backend-35da66f730af.herokuapp.com/update/${id}`,
+				{
+					method: 'PATCH',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({
+						fname,
+						lname,
+						uphone,
+						uemail,
+						upassword,
+						cpassword,
+					}),
+				}
+			);
 
             const data2 = await res2.json();
 
@@ -69,12 +76,15 @@ const Update = () => {
 
     const userData = async () => {
 
-        const res = await fetch(`/singleuser/${id}`, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        });
+        const res = await fetch(
+			`https://scms-backend-35da66f730af.herokuapp.com/singleuser/${id}`,
+			{
+				method: 'GET',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			}
+		);
 
         const data = await res.json();
 

@@ -93,7 +93,11 @@ const AddCom = () => {
         } else {
 
             try {
-                const res = await axios.post("/addcomplaint", formData, config);
+                const res = await axios.post(
+					'https://scms-backend-35da66f730af.herokuapp.com/addcomplaint',
+					formData,
+					config
+				);
 
                 if (res.status === 201) {
                     swal("Thankyou!", "Complaint Sent to Selected Department!", "success");

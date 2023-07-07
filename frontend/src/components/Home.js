@@ -11,11 +11,14 @@ const Home = () => {
   const [data, setData] = useState([]);
 
   const getDepartment = async () => {
-    const resp = await axios.get('/getdepartment', {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const resp = await axios.get(
+		'https://scms-backend-35da66f730af.herokuapp.com/getdepartment',
+		{
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		}
+	);
 
     if (resp.data.status === 201) {
       console.log('Data Fetched');
@@ -54,16 +57,19 @@ const Home = () => {
     } else if (!memail.includes('@')) {
       alert('Enter valid email');
     } else {
-      const resp = await fetch('/addmember', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          mname,
-          memail,
-        }),
-      });
+      const resp = await fetch(
+			'https://scms-backend-35da66f730af.herokuapp.com/addmember',
+			{
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					mname,
+					memail,
+				}),
+			}
+		);
 
       if (resp.status === 201) {
         swal('Thankyou!', 'Details Sent!', 'success');
@@ -78,11 +84,14 @@ const Home = () => {
   const [data2, setData2] = useState([]);
 
   const getMembers = async () => {
-    const resp = await axios.get('/getmembers', {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const resp = await axios.get(
+		'https://scms-backend-35da66f730af.herokuapp.com/getmembers',
+		{
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		}
+	);
 
     if (resp.data.status === 201) {
       console.log('Data Fetched');

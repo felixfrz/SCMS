@@ -42,21 +42,24 @@ const Register = () => {
     } else if (upassword !== cpassword) {
       swal('Warning!', 'Please enter same passwords', 'warning');
     } else {
-      const res = await fetch('/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          fname,
-          lname,
-          uphone,
-          uemail,
-          upassword,
-          cpassword,
-          department,
-        }),
-      });
+      const res = await fetch(
+			'https://scms-backend-35da66f730af.herokuapp.com/register',
+			{
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					fname,
+					lname,
+					uphone,
+					uemail,
+					upassword,
+					cpassword,
+					department,
+				}),
+			}
+		);
 
       const data = await res.json();
 

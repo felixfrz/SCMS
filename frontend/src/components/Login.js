@@ -12,27 +12,27 @@ const Login = () => {
   Axios.defaults.withCredentials = true;
 
   const LoginNow = () => {
-    Axios.post('/login', {
-      uemail: uemail,
-      upassword: upassword,
-    }).then((response) => {
-      if (response.data[0]) {
-        localStorage.setItem('user', JSON.stringify(response.data[0]));
+    Axios.post('https://scms-backend-35da66f730af.herokuapp.com/login', {
+		uemail: uemail,
+		upassword: upassword,
+	}).then((response) => {
+		if (response.data[0]) {
+			localStorage.setItem('user', JSON.stringify(response.data[0]));
 
-        if (response.data[0].department === 'user') {
-          swal('Great!', 'Login SUccess!', 'success');
-          history('/');
-        } else if (response.data[0].department === 'admin') {
-          swal('Great!', 'Login SUccess!', 'success');
-          history('/staff/admin');
-        } else {
-          swal('Great!', 'Login SUccess!', 'success');
-          history('/staff/department');
-        }
-      } else {
-        swal('Warning!', 'Invalid Credentails!', 'warning');
-      }
-    });
+			if (response.data[0].department === 'user') {
+				swal('Great!', 'Login SUccess!', 'success');
+				history('/');
+			} else if (response.data[0].department === 'admin') {
+				swal('Great!', 'Login SUccess!', 'success');
+				history('/staff/admin');
+			} else {
+				swal('Great!', 'Login SUccess!', 'success');
+				history('/staff/department');
+			}
+		} else {
+			swal('Warning!', 'Invalid Credentails!', 'warning');
+		}
+	});
   };
 
   useEffect(() => {

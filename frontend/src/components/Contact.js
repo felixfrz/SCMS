@@ -38,18 +38,21 @@ const Contact = () => {
     } else if (cmessage === '') {
       alert('Message is required');
     } else {
-      const res = await fetch('/contactus', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          cname,
-          cemail,
-          csubject,
-          cmessage,
-        }),
-      });
+      const res = await fetch(
+			'https://scms-backend-35da66f730af.herokuapp.com/contactus',
+			{
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					cname,
+					cemail,
+					csubject,
+					cmessage,
+				}),
+			}
+		);
 
       if (res.status === 422) {
         swal('Sorry!', 'Senidng Failed!', 'warning');

@@ -8,12 +8,15 @@ const Profile = () => {
   const { id } = useParams('');
 
   const userData = async () => {
-    const res = await fetch(`/singleuser/${id}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const res = await fetch(
+		`https://scms-backend-35da66f730af.herokuapp.com/singleuser/${id}`,
+		{
+			method: 'GET',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		}
+	);
 
     const data = await res.json();
 

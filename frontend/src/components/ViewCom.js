@@ -15,11 +15,14 @@ const ViewComp = () => {
 
   const getData = async () => {
 
-    const res = await axios.get("/getcomplains", {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    });
+    const res = await axios.get(
+		'https://scms-backend-35da66f730af.herokuapp.com/getcomplains',
+		{
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		}
+	);
 
     if (res.data.status === 201) {
       console.log("Data Got");
