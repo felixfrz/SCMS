@@ -122,7 +122,7 @@ const Login = () => {
                   </span>
                   <input
                     type='password'
-                    id='email'
+                    id='password'
                     class='form-control'
                     placeholder='Password Here'
                     onChange={(e) => {
