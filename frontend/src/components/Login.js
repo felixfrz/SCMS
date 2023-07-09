@@ -22,7 +22,7 @@ const Login = () => {
 
 			if (response.data[0].department === 'user') {
 				swal('Great!', 'Login SUccess!', 'success');
-				history('https://scms-web.netlify.app/');
+				history('/');
 					
 			} else if (response.data[0].department === 'admin') {
 				swal('Great!', 'Login SUccess!', 'success');
@@ -40,7 +40,7 @@ const Login = () => {
   useEffect(() => {
     const auth = localStorage.getItem('user');
     if (auth && JSON.parse(auth).department === 'user') {
-      history('https://scms-web.netlify.app/');
+      history('/');
 	    	console.log('login successfully');
     } else if (auth && JSON.parse(auth).department === 'admin') {
       history('/staff/admin');
