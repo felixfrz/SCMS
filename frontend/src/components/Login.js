@@ -21,11 +21,11 @@ const Login = () => {
 
 			if (response.data[0].department === 'user') {
 				swal('Great!', 'Login SUccess!', 'success');
-				history('/');
+				history('https://scms-backend-35da66f730af.herokuapp.com/');
 					console.log('login successfully');
 			} else if (response.data[0].department === 'admin') {
 				swal('Great!', 'Login SUccess!', 'success');
-				history('/staff/admin');
+				history('https://scms-backend-35da66f730af.herokuapp.com/staff/admin');
 			} else {
 				swal('Great!', 'Login SUccess!', 'success');
 				history('/staff/department');
