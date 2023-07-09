@@ -22,14 +22,14 @@ const Login = () => {
 
 			if (response.data[0].department === 'user') {
 				swal('Great!', 'Login SUccess!', 'success');
-				history('https://scms-web.netlify.app/');
+				history('/');
 					
 			} else if (response.data[0].department === 'admin') {
 				swal('Great!', 'Login SUccess!', 'success');
-				history('https://scms-web.netlify.app/staff/admin');
+				history('/staff/admin');
 			} else {
 				swal('Great!', 'Login SUccess!', 'success');
-				history('https://scms-web.netlify.app//staff/department');
+				history('/staff/department');
 			}
 		} else {
 			swal('Warning!', 'Invalid Credentails!', 'warning');
@@ -40,16 +40,16 @@ const Login = () => {
   useEffect(() => {
     const auth = localStorage.getItem('user');
     if (auth && JSON.parse(auth).department === 'user') {
-      history('https://scms-web.netlify.app/');
+      history('/');
 	    	console.log('login successfully');
     } else if (auth && JSON.parse(auth).department === 'admin') {
-      history('https://scms-web.netlify.app/staff/admin');
+      history('/staff/admin');
     } else if (
       auth &&
       JSON.parse(auth).department !== 'user' &&
       JSON.parse(auth).department !== 'admin'
     ) {
-      history('https://scms-web.netlify.app/staff/department');
+      history('/staff/department');
     }
   });
 
