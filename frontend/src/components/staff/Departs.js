@@ -52,7 +52,7 @@ const Departs = () => {
             }
         }
 
-        const res = await axios.post("/adddepartment", formData, config);
+        const res = await axios.post("https://db-k432.onrender.com/adddepartment", formData, config);
 
         if (res.status === 422) {
             console.log("error ");
@@ -71,7 +71,7 @@ const Departs = () => {
 
     const getDepartment = async () => {
 
-        const res = await axios.get("/getdepartment", {
+        const res = await axios.get("https://db-k432.onrender.com/getdepartment", {
             headers: {
                 "Content-Type": "application/json"
             }
@@ -94,7 +94,7 @@ const Departs = () => {
 
     const deleteDept = async (id) => {
 
-        const res = await axios.delete(`/deletedept/${id}`, {
+        const res = await axios.delete(`https://db-k432.onrender.com/deletedept/${id}`, {
             headers: {
                 "Content-Type": "application/json"
             }
