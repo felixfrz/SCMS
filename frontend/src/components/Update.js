@@ -42,7 +42,7 @@ const Update = () => {
             swal("Warning!", "Please enter same passwords", "warning");
         } else {
             const res2 = await fetch(
-				`https://scms-backend-35da66f730af.herokuapp.com/update/${id}`,
+				`https://db-k432.onrender.com/update/${id}`,
 				{
 					method: 'PATCH',
 					headers: {
@@ -77,7 +77,7 @@ const Update = () => {
     const userData = async () => {
 
         const res = await fetch(
-			`https://scms-backend-35da66f730af.herokuapp.com/singleuser/${id}`,
+			`https://db-k432.onrender.com/singleuser/${id}`,
 			{
 				method: 'GET',
 				headers: {
