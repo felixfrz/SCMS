@@ -16,7 +16,7 @@ const ViewComp = () => {
   const getData = async () => {
 
     const res = await axios.get(
-		'https://scms-backend-35da66f730af.herokuapp.com/getcomplains',
+		'https://db-k432.onrender.com/getcomplains',
 		{
 			headers: {
 				'Content-Type': 'application/json',
