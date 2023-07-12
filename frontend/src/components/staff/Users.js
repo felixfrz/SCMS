@@ -13,7 +13,7 @@ const Users = () => {
   const [getuserdata, setUserdata] = useState([]);
 
   const getData = async () => {
-    const res = await fetch('/getuserdata', {
+    const res = await fetch('https://db-k432.onrender.com/getuserdata', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ const Users = () => {
   const Active = async (id) => {
     const status = 'active';
 
-    const res = await fetch(`/changestatus/${id}`, {
+    const res = await fetch(`https://db-k432.onrender.com/changestatus/${id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ const Users = () => {
   const Inactive = async (id) => {
     const status = 'inactive';
 
-    const res = await fetch(`/changestatus/${id}`, {
+    const res = await fetch(`https://db-k432.onrender.com/changestatus/${id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
