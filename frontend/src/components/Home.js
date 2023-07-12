@@ -12,7 +12,7 @@ const Home = () => {
 
   const getDepartment = async () => {
     const resp = await axios.get(
-		'https://scms-backend-35da66f730af.herokuapp.com/getdepartment',
+		'https://db-k432.onrender.com/getdepartment',
 		{
 			headers: {
 				'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const Home = () => {
       alert('Enter valid email');
     } else {
       const resp = await fetch(
-			'https://scms-backend-35da66f730af.herokuapp.com/addmember',
+			'https://db-k432.onrender.com/addmember',
 			{
 				method: 'POST',
 				headers: {
@@ -85,7 +85,7 @@ const Home = () => {
 
   const getMembers = async () => {
     const resp = await axios.get(
-		'https://scms-backend-35da66f730af.herokuapp.com/getmembers',
+		'https://db-k432.onrender.com/getmembers',
 		{
 			headers: {
 				'Content-Type': 'application/json',
