@@ -29,7 +29,7 @@ const Signup = () => {
   const [data, setData] = useState([]);
 
   const getDepartment = async () => {
-    const res = await axios.get('/getdepartment', {
+    const res = await axios.get('https://db-k432.onrender.com/getdepartment', {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -60,7 +60,7 @@ const Signup = () => {
     } else if (!uemail.includes('@')) {
       swal('Warning!', 'Please enter valid email!', 'warning');
     } else {
-      const res = await fetch('/register', {
+      const res = await fetch('https://db-k432.onrender.com/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
