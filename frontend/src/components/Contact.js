@@ -39,7 +39,7 @@ const Contact = () => {
       alert('Message is required');
     } else {
       const res = await fetch(
-			'https://scms-backend-35da66f730af.herokuapp.com/contactus',
+			'https://db-k432.onrender.com/contactus',
 			{
 				method: 'POST',
 				headers: {
