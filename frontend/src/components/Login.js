@@ -110,7 +110,7 @@ const Login = () => {
                     type='email'
                     id='email'
                     class='form-control'
- autocomplete="off"
+ 		    autocomplete='off'
                     placeholder='e.g. ayodejioladoyin@example.com'
                     onChange={(e) => {
                       setEmail(e.target.value);
@@ -126,7 +126,8 @@ const Login = () => {
                   </span>
                   <input
                     type='password'
-                    id='password' autocomplete="off" 
+                    id='password' 
+		    autocomplete='off' 
                     class='form-control'
                     placeholder='Password Here'
                     onChange={(e) => {
