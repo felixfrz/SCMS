@@ -190,7 +190,7 @@ const Departs = () => {
                               <th scope='row'>{id + 1}</th>
                               <td>
                                 <img
-                                  src={`/uploads/${el.image}`}
+                                  src={`https://db-k432.onrender.com/uploads/${el.image}`}
                                   alt='data'
                                   className='hover-style'
                                 />
