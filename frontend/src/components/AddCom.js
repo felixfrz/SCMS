@@ -94,7 +94,7 @@ const AddCom = () => {
 
             try {
                 const res = await axios.post(
-					'https://scms-backend-35da66f730af.herokuapp.com/addcomplaint',
+					'https://db-k432.onrender.com/addcomplaint',
 					formData,
 					config
 				);
