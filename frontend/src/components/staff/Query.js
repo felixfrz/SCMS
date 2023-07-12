@@ -14,7 +14,7 @@ const Query = () => {
 
     const getQueries = async () => {
 
-        const res = await axios.get("/getqueries", {
+        const res = await axios.get("https://db-k432.onrender.com/getqueries", {
             headers: {
                 "Content-Type": "application/json"
             }
@@ -37,7 +37,7 @@ const Query = () => {
 
     const deleteQuery = async (id) => {
 
-        const res = await axios.delete(`/deletequery/${id}`, {
+        const res = await axios.delete(`https://db-k432.onrender.com/deletequery/${id}`, {
             headers: {
                 "Content-Type": "application/json"
             }
