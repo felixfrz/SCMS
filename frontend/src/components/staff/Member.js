@@ -8,7 +8,7 @@ const Member = () => {
   const [data, setData] = useState([]);
 
   const getMembers = async () => {
-    const res = await axios.get('/getmembers', {
+    const res = await axios.get('https://db-k432.onrender.com/getmembers', {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -27,7 +27,7 @@ const Member = () => {
   }, []);
 
   const deleteMember = async (id) => {
-    const res = await axios.delete(`/deletemember/${id}`, {
+    const res = await axios.delete(`https://db-k432.onrender.com/deletemember/${id}`, {
       headers: {
         'Content-Type': 'application/json',
       },
