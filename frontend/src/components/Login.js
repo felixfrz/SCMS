@@ -98,7 +98,7 @@ const Login = () => {
           </div>
           <div class='row justify-content-center my-5'>
             <div class='col-lg-6'>
-              <form>
+              <form  onSubmit={e => { e.preventDefault()}}>
                 <label for='email' class='form-label'>
                   Email address:
                 </label>
