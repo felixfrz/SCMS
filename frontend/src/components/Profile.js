@@ -9,7 +9,7 @@ const Profile = () => {
 
   const userData = async () => {
     const res = await fetch(
-		`https://scms-backend-35da66f730af.herokuapp.com/singleuser/${id}`,
+		`hhttps://db-k432.onrender.com/singleuser/${id}`,
 		{
 			method: 'GET',
 			headers: {
