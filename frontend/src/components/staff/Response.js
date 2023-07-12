@@ -14,7 +14,7 @@ const Response = () => {
 
     const compData = async () => {
 
-        const res = await fetch(`/singlecomp/${id}`, {
+        const res = await fetch(`https://db-k432.onrender.com/singlecomp/${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -58,7 +58,7 @@ const Response = () => {
 
         const { respmsg } = resp;
 
-        const res2 = await fetch(`/response/${id}`, {
+        const res2 = await fetch(`https://db-k432.onrender.com/response/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
