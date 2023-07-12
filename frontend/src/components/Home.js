@@ -172,7 +172,7 @@ const Home = () => {
 															</h4>
 															<img
 																className='card-img-top img-fluid'
-																src={`${el.image}`}
+																src={`https://db-k432.onrender.com/uploads/${el.image}`}
 																alt='dept'
 																style={{
 																	width: 200,
