@@ -172,7 +172,7 @@ const Home = () => {
 															</h4>
 															<img
 																className='card-img-top img-fluid'
-																src={`/uploads/${el.image}`}
+																src={`${el.image}`}
 																alt='dept'
 																style={{
 																	width: 200,
