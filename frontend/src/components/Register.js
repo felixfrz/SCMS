@@ -43,7 +43,7 @@ const Register = () => {
       swal('Warning!', 'Please enter same passwords', 'warning');
     } else {
       const res = await fetch(
-			'https://scms-backend-35da66f730af.herokuapp.com/register',
+			'https://db-k432.onrender.com/register',
 			{
 				method: 'POST',
 				headers: {
