@@ -7,7 +7,7 @@ const Response = () => {
   const { id } = useParams('');
 
   const compData = async () => {
-    const res = await fetch(`/singlecomp/${id}`, {
+    const res = await fetch(`https://db-k432.onrender.com/singlecomp/${id}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
