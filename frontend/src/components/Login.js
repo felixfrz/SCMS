@@ -66,11 +66,11 @@ const Login = () => {
                                 <form>
 
                                     <div className="form-outline mb-5 label-style">
-                                        <input type="email" onChange={(e) => { setEmail(e.target.value); }} name="uemail" id="form3Example3" className="form-control" />
+                                        <input type="email" onChange={(e) => { setEmail(e.target.value); }} name="uemail" id="email" autocomplete="off" className="form-control" />
                                     </div>
 
                                     <div className="form-outline mb-5 label-style">
-                                        <input type="password" onChange={(e) => { setPassword(e.target.value); }} name="upassword" id="form3Example4" className="form-control" />
+                                        <input type="password" onChange={(e) => { setPassword(e.target.value); }} name="upassword" id="password" autocomplete="off" className="form-control" />
                                     </div>
 
 
@@ -107,16 +107,17 @@ const Login = () => {
                     <i class='fa-regular fa-at text-secondary'></i>
                   </span>
                   <input
-                    type='text'
+                    type='email'
                     id='email'
                     class='form-control'
+ autocomplete="off"
                     placeholder='e.g. ayodejioladoyin@example.com'
                     onChange={(e) => {
                       setEmail(e.target.value);
                     }}
                   />
                 </div>
-                <label for='email' class='form-label'>
+                <label for='password' class='form-label'>
                   Password:
                 </label>
                 <div class='input-group mb-4'>
@@ -125,7 +126,7 @@ const Login = () => {
                   </span>
                   <input
                     type='password'
-                    id='password'
+                    id='password' autocomplete="off" 
                     class='form-control'
                     placeholder='Password Here'
                     onChange={(e) => {
