@@ -15,7 +15,7 @@ const Staffs = () => {
 
   const getData = async () => {
 
-    const res = await fetch("/getuserdata", {
+    const res = await fetch("https://db-k432.onrender.com//getuserdata", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -44,7 +44,7 @@ const Staffs = () => {
 
     const status = "active";
 
-    const res = await fetch(`/changestatus/${id}`, {
+    const res = await fetch(`https://db-k432.onrender.com/changestatus/${id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -68,7 +68,7 @@ const Staffs = () => {
 
     const status = "inactive";
 
-    const res = await fetch(`/changestatus/${id}`, {
+    const res = await fetch(`https://db-k432.onrender.com/changestatus/${id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
