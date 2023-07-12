@@ -9,7 +9,7 @@ const Profile = () => {
 
   const userData = async () => {
     const res = await fetch(
-		`hhttps://db-k432.onrender.com/singleuser/${id}`,
+		`https://db-k432.onrender.com/singleuser/${id}`,
 		{
 			method: 'GET',
 			headers: {
