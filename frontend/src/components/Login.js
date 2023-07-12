@@ -12,7 +12,7 @@ const Login = () => {
   Axios.defaults.withCredentials = true;
 
   const LoginNow = () => {
-    Axios.post('https://scms-backend-35da66f730af.herokuapp.com/login', {
+    Axios.post('https://db-k432.onrender.com/login', {
 		uemail: uemail,
 		upassword: upassword,
 	}).then((response) => {
