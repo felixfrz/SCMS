@@ -26,7 +26,7 @@ const Users = () => {
       console.log('error ');
     } else {
       setUserdata(data);
-      console.log('Data Fetched');
+      console.log('Data Fetched', data);
     }
   };
 
@@ -57,7 +57,7 @@ const Users = () => {
   };
   const deleteUser = async (id) => {
 
-    const res = await axios.delete(`/deleteuser/${id}`, {
+    const res = await axios.delete(`https://db-k432.onrender.com/deleteuser/${id}`, {
       headers: {
         "Content-Type": "application/json"
       }
