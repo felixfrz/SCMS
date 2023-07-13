@@ -15,7 +15,7 @@ const Complains = () => {
 
   const getData = async () => {
 
-    const res = await axios.get("/getcomplains", {
+    const res = await axios.get("https://db-k432.onrender.com/getcomplains", {
       headers: {
         "Content-Type": "application/json"
       }
