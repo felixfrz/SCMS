@@ -20,6 +20,7 @@ const Complains2 = () => {
 
     if (res.data.status === 201) {
       console.log('Data Got');
+      console.log(res.data.data)
       setCompData(res.data.data);
     } else {
       console.log('Data Failed');
