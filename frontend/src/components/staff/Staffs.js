@@ -15,7 +15,7 @@ const Staffs = () => {
 
   const getData = async () => {
 
-    const res = await fetch("https://db-k432.onrender.com//getuserdata", {
+    const res = await fetch("https://db-k432.onrender.com/getuserdata", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
