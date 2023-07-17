@@ -55,6 +55,7 @@ const Complains2 = () => {
                 getcompdata.department.includes(Department)
               )
               .map((el, id) => {
+                console.log(el.username);
                 return (
                   <>
                     <tr key={el.id}>
